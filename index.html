@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiedyBus</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. ZMIENNE ARCHITEKTURY STYLI (DESIGN TOKENS & DARK MODE)
+       ========================================================================== */
+    :root {
+      --bg-main: #0b0e14;         /* Główny czarny/ciemnoniebieski odcień tła */
+      --bg-card: #151922;         /* Tło kart i panelu wyszukiwania */
+      --bg-card-hover: #1c2230;   /* Tło po najechaniu na kartę */
+      --bg-input: #1f2533;        /* Tło pól tekstowych i selectów */
+      --border-color: #2a3142;    /* Obramowania separatorów i ramek */
+      
+      --accent-green: #00e676;    /* Neonowa zieleń w stylu Jakdojade */
+      --accent-green-hover: #00c853;
+      --accent-glow: rgba(0, 230, 118, 0.25);
+      
+      --text-main: #f1f5f9;       /* Główny jasny tekst */
+      --text-muted: #94a3b8;      /* Przygaszony tekst opisowy */
+      --text-dim: #64748b;        /* Drugorzędne podpiski */
+      
+      --badge-urgent-bg: #dc2626;  /* Czerwony alert dla bliskich odjazdów */
+      --badge-urgent-text: #ffffff;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      
+      --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.4);
+      --transition-fast: 0.2s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(30, 136, 229, 0.05) 0%, transparent 50%);
+    }
+
+    /* ==========================================================================
+       2. GŁÓWNY KONTENER APLIKACJI (RESPONSYWNY UKŁAD DESKTOP / MOBILE)
+       ========================================================================== */
+    .app-container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 12px;
+    }
+
+    /* Nagłówek aplikacji */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent-green), #00b0ff);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #000;
+      font-size: 20px;
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .live-clock {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-green);
+      background: var(--bg-input);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-clock::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Grid główny dla wyszukiwarki i wyników */
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      transition: max-width 0.3s ease;
+    }
+
+    @media (min-width: 850px) {
+      body {
+        height: 100vh;
+        overflow: hidden; /* Blokada niepotrzebnego scrollowania całej strony na komputerze */
+      }
+
+      .app-container {
+        height: calc(100vh - 32px);
+        max-height: 100vh;
+      }
+
+      .main-content.has-results {
+        grid-template-columns: 360px 1fr;
+        max-width: 960px;
+        flex: 1;
+        min-height: 0; /* Kluczowa właściwość umożliwiająca niezależny scroll wyników */
+        align-items: stretch;
+      }
+
+      .search-card {
+        height: fit-content;
+      }
+
+      .results-container {
+        overflow-y: auto;
+        max-height: 100%;
+        padding-right: 6px;
+      }
+
+      /* Elegancki customowy pasek przewijania dla boksu z wynikami */
+      .results-container::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .results-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 4px;
+      }
+
+      .results-container::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+      }
+
+      .results-container::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-green);
+      }
+    }
+
+    /* ==========================================================================
+       3. EKRAN WYSZUKIWANIA (HUD - HEADS UP DISPLAY)
+       ========================================================================== */
+    .search-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-main);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    .search-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Sekcja wyboru przystanków ze strzałką zamiany (Swap) */
+    .stops-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .select-input-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .stop-dot {
+      position: absolute;
+      left: 16px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .stop-dot.start-dot {
+      background-color: #00e676;
+      box-shadow: 0 0 6px rgba(0, 230, 118, 0.7);
+    }
+
+    .stop-dot.end-dot {
+      background-color: #f43f5e;
+      box-shadow: 0 0 6px rgba(244, 63, 94, 0.7);
+    }
+
+    select, input[type="date"], input[type="time"] {
+      width: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 12px 14px 12px 42px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 500;
+      outline: none;
+      transition: var(--transition-fast);
+      appearance: none;
+      cursor: pointer;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--accent-green);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    /* Przycisk zamiany miejscami "Skąd" <-> "Dokąd" */
+    .swap-btn {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--accent-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: var(--transition-fast);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .swap-btn:hover {
+      background-color: var(--accent-green);
+      color: #000;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* Sekcja Czasu i Dnia */
+    .datetime-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .datetime-grid input {
+      padding-left: 14px; /* Brak ikony z lewej dla date/time */
+    }
+
+    /* Automatyczna informacja o wykrytym dniu tygodnia */
+    .auto-day-badge {
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* Przycisk Szukaj */
+    .btn-search {
+      background: linear-gradient(135deg, var(--accent-green), #00c853);
+      color: #051e11;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition-fast);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      margin-top: 4px;
+    }
+
+    .btn-search:hover {
+      transform: translateY(-2deg);
+      box-shadow: 0 6px 25px rgba(0, 230, 118, 0.4);
+    }
+
+    .btn-search:active {
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       4. EKRAN WYNIKÓW (RESULT CARDS - JAKDOJADE STYLE)
+       ========================================================================== */
+    .results-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+    }
+
+    .results-route-summary {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .results-count-badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-green);
+      background: rgba(0, 230, 118, 0.1);
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 230, 118, 0.2);
+    }
+
+    /* Karty odjazdów */
+    .trip-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition-fast);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .trip-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      background-color: var(--bg-card-hover);
+    }
+
+    /* Górny pasek karty (Badge przewoźnika + Inteligentny Czas) */
+    .card-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .operator-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Inteligentne pokazywanie czasu */
+    .time-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .time-badge.urgent {
+      background-color: var(--badge-urgent-bg);
+      color: var(--badge-urgent-text);
+      font-size: 14px;
+      font-weight: 800;
+      animation: pulse-urgent 1.5s infinite alternate;
+    }
+
+    @keyframes pulse-urgent {
+      from { box-shadow: 0 0 5px rgba(220, 38, 38, 0.4); }
+      to { box-shadow: 0 0 15px rgba(220, 38, 38, 0.9); }
+    }
+
+    .time-badge.normal {
+      background-color: var(--bg-input);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Środkowy układ trasy (Godziny Odjazdu / Przyjazdu i czas trwania) */
+    .route-display {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    .stop-point {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stop-point.start { text-align: left; }
+    .stop-point.end { text-align: right; }
+
+    .time-large {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+
+    .stop-name {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .route-timeline-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+    }
+
+    .duration-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-green);
+      background-color: rgba(0, 230, 118, 0.1);
+      padding: 3px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 230, 118, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .fare-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fbbf24;
+      background-color: rgba(251, 191, 36, 0.1);
+      padding: 3px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .timeline-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, var(--accent-green), #00b0ff);
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .timeline-line::before, .timeline-line::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--text-main);
+    }
+
+    .timeline-line::before { left: 0; }
+    .timeline-line::after { right: 0; }
+
+    /* Rozwijany harmonogram przystanków pośrednich */
+    .details-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 14px 0 2px 0;
+      border-top: 1px dashed var(--border-color);
+      transition: var(--transition-fast);
+    }
+
+    .details-toggle:hover {
+      color: var(--accent-green);
+    }
+
+    .stops-timeline {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px 16px;
+      background-color: var(--bg-input);
+      border-radius: var(--radius-md);
+      margin-top: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stops-timeline.open {
+      display: flex;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .timeline-item-time {
+      font-weight: 700;
+      color: var(--accent-green);
+      min-width: 45px;
+    }
+
+    .timeline-item-name {
+      color: var(--text-muted);
+    }
+
+    .timeline-item.active .timeline-item-name {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .timeline-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--text-dim);
+    }
+
+    .timeline-item.active .timeline-dot {
+      background-color: var(--accent-green);
+      box-shadow: 0 0 6px var(--accent-green);
+    }
+
+    /* Stan pusty (Brak wyników) */
+    .empty-state {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .empty-icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+
+    .empty-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .empty-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 400px;
+      line-height: 1.5;
+    }
+
+    /* Stopka */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-dim);
+      font-size: 12px;
+      border-top: 1px solid var(--border-color);
+      margin-top: auto;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+
+    <!-- GŁÓWNY KONTENER APKA -->
+    <main class="main-content">
+      
+      <!-- EKRAN WYSZUKIWANIA (HUD) -->
+      <section class="search-card">
+        <div class="search-title">Wyszukaj połączenie</div>
+
+        <div class="stops-wrapper">
+          <!-- SKĄD -->
+          <div class="input-group">
+            <label class="input-label" for="fromStopSelect">Skąd jedziemy?</label>
+            <div class="select-input-container">
+              <span class="stop-dot start-dot"></span>
+              <select id="fromStopSelect">
+                <option value="">Ładowanie przystanków...</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- PRZYCISK ZAMIANY (SWAP) -->
+          <button type="button" class="swap-btn" id="swapStopsBtn" title="Zamień przystanki miejscami">
+            ⇄
+          </button>
+
+          <!-- DOKĄD -->
+          <div class="input-group">
+            <label class="input-label" for="toStopSelect">Dokąd jedziemy?</label>
+            <div class="select-input-container">
+              <span class="stop-dot end-dot"></span>
+              <select id="toStopSelect">
+                <option value="">Ładowanie przystanków...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEKCJA DATY I GODZINY -->
+        <div class="datetime-grid">
+          <div class="input-group">
+            <label class="input-label" for="dateInput">Data</label>
+            <input type="date" id="dateInput">
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="timeInput">Godzina odjazdu</label>
+            <input type="time" id="timeInput">
+          </div>
+        </div>
+
+
+        <!-- PRZYCISK SZUKAJ -->
+        <button type="button" class="btn-search" id="searchBtn">
+          <span>Wyszukaj połączenia</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </section>
+
+      <!-- EKRAN WYNIKÓW (RESULTS) -->
+      <section class="results-container" id="resultsContainer">
+        <!-- Wyniki wyszukiwania zostaną tu wyrenderowane dynamicznie przez JavaScript -->
+      </section>
+
+    </main>
+
+    <!-- STOPKA -->
+    <footer>
+      Made by szymvs
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+     5. LOGIKA APLIKACJI W JAVASCRIPT ("SZKOLNY" STYL KODU Z KOMENTARZAMI)
+     ========================================================================== -->
+  <script>
+    // ==========================================================================
+    // DEKLARACJA ZMIENNYCH GLOBALNYCH
+    // ==========================================================================
+    let scheduleData = null; // Przechowuje pobrane dane z pliku schedule.json
+
+    // Elementy HTML z drzewa DOM
+    const fromStopSelect = document.getElementById('fromStopSelect');
+    const toStopSelect   = document.getElementById('toStopSelect');
+    const swapStopsBtn   = document.getElementById('swapStopsBtn');
+    const dateInput      = document.getElementById('dateInput');
+    const timeInput      = document.getElementById('timeInput');
+    const searchBtn      = document.getElementById('searchBtn');
+    const resultsContainer = document.getElementById('resultsContainer');
+
+    // Nazwy dni tygodnia w języku polskim
+    const polishDayNames = [
+      'Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'
+    ];
+
+    // ==========================================================================
+    // 1. POBIERANIE I INICJALIZACJA DANYCH Z PLIKU JSON
+    // ==========================================================================
+    
+    // Funkcja pobierająca asynchronicznie plik schedule.json z tego samego katalogu
+    async function loadScheduleData() {
+      try {
+        const response = await fetch('schedule.json');
+        if (!response.ok) {
+          throw new Error('Nie udało się wczytać pliku schedule.json (błąd HTTP: ' + response.status + ')');
+        }
+        scheduleData = await response.json();
+        console.log('✅ Dane rozkładu jazdy zostały pomyślnie załadowane:', scheduleData);
+        
+        // Inicjalizacja komponentów po pomyślnym pobraniu danych
+        populateStopsDropdowns();
+        setDefaultDateTime();
+        
+        // Formularz rozpoczyna w stanie pustym (wyśrodkowany), bez automatycznego szukania na wystartowanie
+      } catch (error) {
+        console.error('❌ Błąd podczas ładowania danych:', error);
+        resultsContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">⚠️</div>
+            <div class="empty-title">Błąd ładowania danych</div>
+            <div class="empty-desc">Nie można pobrać pliku <code>schedule.json</code>. Upewnij się, że plik znajduje się w tym samym katalogu co aplikacja i uruchom ją przez serwer HTTP.</div>
+          </div>
+        `;
+      }
+    }
+
+    // Wypełnienie rozwijanych list przystanków "Skąd" i "Dokąd"
+    function populateStopsDropdowns() {
+      if (!scheduleData || !scheduleData.stops) return;
+
+      fromStopSelect.innerHTML = '<option value="" disabled selected>Wybierz przystanek odjazdowy...</option>';
+      toStopSelect.innerHTML   = '<option value="" disabled selected>Wybierz przystanek docelowy...</option>';
+
+      scheduleData.stops.forEach((stop) => {
+        const optionFrom = document.createElement('option');
+        optionFrom.value = stop.id;
+        optionFrom.textContent = stop.name;
+
+        const optionTo = document.createElement('option');
+        optionTo.value = stop.id;
+        optionTo.textContent = stop.name;
+
+        fromStopSelect.appendChild(optionFrom);
+        toStopSelect.appendChild(optionTo);
+      });
+
+      fromStopSelect.value = '';
+      toStopSelect.value = '';
+    }
+
+    // ==========================================================================
+    // 2. AUTOMATYCZNA LOGIKA OBSŁUGI DATY, CZASU I DNIA TYGODNIA
+    // ==========================================================================
+
+    // Ustawia domyślną datę i godzinę na aktualny czas lokalny użytkownika
+    function setDefaultDateTime() {
+      const now = new Date();
+
+      // Formatowanie daty YYYY-MM-DD dla pola HTML
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      dateInput.value = `${year}-${month}-${day}`;
+
+      // Formatowanie godziny HH:MM dla pola HTML
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      timeInput.value = `${hours}:${minutes}`;
+
+      // Domyślna godzina i data
+    }
+
+    // Wylicza typ dnia (weekday / saturday / sunday) oraz nazwę dnia z wybranej daty
+    function getDayTypeFromDate(dateStr) {
+      // Tworzymy obiekt daty w strefie czasowej użytkownika
+      const parts = dateStr.split('-');
+      const dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+
+      const dayOfWeek = dateObj.getDay(); // 0 = Niedziela, 6 = Sobota, 1-5 = Pon-Pt
+      const dayName = polishDayNames[dayOfWeek];
+
+      let dayType = 'weekday';
+      let dayTypeLabel = 'Dzień roboczy';
+
+      if (dayOfWeek === 0) {
+        dayType = 'sunday';
+        dayTypeLabel = 'Niedziela / Święto';
+      } else if (dayOfWeek === 6) {
+        dayType = 'saturday';
+        dayTypeLabel = 'Sobota';
+      }
+
+      return {
+        dayType: dayType,
+        dayName: dayName,
+        dayTypeLabel: dayTypeLabel
+      };
+    }
+
+    // Reakcja na zmianę daty w formularzu
+    dateInput.addEventListener('change', () => {
+      if (fromStopSelect.value && toStopSelect.value) {
+        searchTrips();
+      }
+    });
+
+    // Reakcja na zmianę godziny w formularzu
+    timeInput.addEventListener('change', () => {
+      if (fromStopSelect.value && toStopSelect.value) {
+        searchTrips();
+      }
+    });
+
+    // Zamiana przystanków "Skąd" <-> "Dokąd"
+    swapStopsBtn.addEventListener('click', () => {
+      const tempVal = fromStopSelect.value;
+      fromStopSelect.value = toStopSelect.value;
+      toStopSelect.value = tempVal;
+      if (fromStopSelect.value && toStopSelect.value) {
+        searchTrips();
+      }
+    });
+
+    // Reakcja na zmianę przystanków w selectach
+    fromStopSelect.addEventListener('change', () => {
+      if (fromStopSelect.value && toStopSelect.value) {
+        searchTrips();
+      }
+    });
+    toStopSelect.addEventListener('change', () => {
+      if (fromStopSelect.value && toStopSelect.value) {
+        searchTrips();
+      }
+    });
+
+    // Nasłuchiwanie na przycisk Szukaj
+    searchBtn.addEventListener('click', searchTrips);
+
+    // ==========================================================================
+    // 3. ALGORYTM WYSZUKIWANIA POŁĄCZEŃ (AUTOMATYCZNY TYP DNIA)
+    // ==========================================================================
+
+    function searchTrips() {
+      if (!scheduleData || !scheduleData.trips) return;
+
+      const mainContentElement = document.querySelector('.main-content');
+      const fromStopId = fromStopSelect.value;
+      const toStopId   = toStopSelect.value;
+
+      // Sprawdzenie czy przystanki zostały wybrane
+      if (!fromStopId || !toStopId) {
+        if (mainContentElement) mainContentElement.classList.add('has-results');
+        resultsContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-title">Wybierz przystanki</div>
+            <div class="empty-desc">Wybierz przystanek odjazdowy oraz docelowy z formularza, aby wyszukać dostępne połączenia.</div>
+          </div>
+        `;
+        return;
+      }
+
+      // Aktywacja układy dwukolumnowego (rozszerzenie z wyśrodkowania)
+      if (mainContentElement) {
+        mainContentElement.classList.add('has-results');
+      }
+      const selectedTime = timeInput.value; // ciąg "HH:MM"
+
+      // AUTOMATYCZNIE WYMYSZAMY TYP DNIA Z WYBRANEJ DATY (BEZ UDZIAŁU UŻYTKOWNIKA)
+      const dayInfo = getDayTypeFromDate(dateInput.value);
+      const selectedDayType = dayInfo.dayType; // "weekday", "saturday", "sunday"
+
+      // Walidacja: Przystanek początkowy i końcowy nie mogą być takie same
+      if (fromStopId === toStopId) {
+        resultsContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-title">Wybierz różne przystanki</div>
+            <div class="empty-desc">Przystanek odjazdowy i docelowy są identyczne. Wybierz dwa różne miejsca trasy.</div>
+          </div>
+        `;
+        return;
+      }
+
+      // Przekształcenie godziny wyszukiwania na minuty od początku doby dla łatwego porównywania
+      const searchMinutes = timeToMinutes(selectedTime);
+
+      // Filtrowanie kursów z pliku JSON
+      const matchedTrips = [];
+
+      scheduleData.trips.forEach(trip => {
+        // 1. Sprawdzamy czy kurs odjeżdża w automatycznie wyznaczony dzień tygodnia
+        const matchesDay = trip.days && trip.days.includes(selectedDayType);
+        if (!matchesDay) return;
+
+        // 2. Szukamy pozycji przystanku początkowego i końcowego w tym kursie
+        const startIndex = trip.stops.findIndex(s => s.stopId === fromStopId);
+        const endIndex   = trip.stops.findIndex(s => s.stopId === toStopId);
+
+        // Przystanek startowy musi w kursie występować PRZED przystankiem docelowym (startIndex < endIndex)
+        if (startIndex !== -1 && endIndex !== -1 && startIndex < endIndex) {
+          const startStopInfo = trip.stops[startIndex];
+          const endStopInfo   = trip.stops[endIndex];
+
+          const depMinutes = timeToMinutes(startStopInfo.time);
+
+          // Uwzględniamy połączenia odjeżdżające o wyznaczonej godzinie lub później
+          if (depMinutes >= searchMinutes) {
+            const arrMinutes = timeToMinutes(endStopInfo.time);
+            const durationMinutes = arrMinutes - depMinutes;
+
+            matchedTrips.push({
+              trip: trip,
+              operatorKey: trip.operator,
+              operatorData: scheduleData.operators[trip.operator] || { name: trip.operator, badgeColor: '#6366f1' },
+              fromStop: startStopInfo,
+              toStop: endStopInfo,
+              depMinutes: depMinutes,
+              arrMinutes: arrMinutes,
+              durationMinutes: durationMinutes,
+              allIntermediateStops: trip.stops.slice(startIndex, endIndex + 1)
+            });
+          }
+        }
+      });
+
+      // Sortowanie odnalezionych kursów po godzinie odjazdu (od najwcześniejszego)
+      matchedTrips.sort((a, b) => a.depMinutes - b.depMinutes);
+
+      // Renderowanie wyników w widoku
+      renderResults(matchedTrips, searchMinutes, dayInfo);
+    }
+
+    // Pomocnicza funkcja: Pobieranie i formatowanie ceny biletu na podstawie stref (zones) z schedule.json
+    function getFarePrice(fromStopId, toStopId) {
+      if (!scheduleData || !scheduleData.stops || !scheduleData.fares) return null;
+
+      const fromStopObj = scheduleData.stops.find(s => s.id === fromStopId);
+      const toStopObj   = scheduleData.stops.find(s => s.id === toStopId);
+
+      if (!fromStopObj || !toStopObj || !fromStopObj.zone || !toStopObj.zone) return null;
+
+      const zoneStart = fromStopObj.zone;
+      const zoneEnd   = toStopObj.zone;
+
+      const key1 = `${zoneStart}_${zoneEnd}`;
+      const key2 = `${zoneEnd}_${zoneStart}`;
+
+      const price = scheduleData.fares[key1] !== undefined 
+        ? scheduleData.fares[key1] 
+        : (scheduleData.fares[key2] !== undefined ? scheduleData.fares[key2] : null);
+
+      if (price === null || price === undefined || isNaN(price)) return null;
+
+      return price.toFixed(2) + ' zł';
+    }
+
+    // Pomocnicza funkcja: konwersja napisu "HH:MM" na liczbę minut od początku dnia
+    function timeToMinutes(timeStr) {
+      if (!timeStr) return 0;
+      const parts = timeStr.split(':');
+      const hours = parseInt(parts[0], 10);
+      const minutes = parseInt(parts[1], 10);
+      return hours * 60 + minutes;
+    }
+
+    // ==========================================================================
+    // 4. INTELIGENTNE POKAZYWANIE CZASU I RENDEROWANIE WYNIKÓW (HTML)
+    // ==========================================================================
+
+    function renderResults(trips, searchMinutes, dayInfo) {
+      const fromStopName = fromStopSelect.options[fromStopSelect.selectedIndex]?.text || '';
+      const toStopName   = toStopSelect.options[toStopSelect.selectedIndex]?.text || '';
+
+      if (trips.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-title">Brak kursów o tej porze</div>
+            <div class="empty-desc">Nie znaleziono bezpośrednich odjazdów z <strong>${fromStopName}</strong> do <strong>${toStopName}</strong> po godzinie ${timeInput.value}.</div>
+          </div>
+        `;
+        return;
+      }
+
+      // Nagłówek wyników
+      let html = `
+        <div class="results-header">
+          <div class="results-route-summary">${fromStopName} ➔ ${toStopName}</div>
+        </div>
+      `;
+
+      const farePrice = getFarePrice(fromStopSelect.value, toStopSelect.value);
+
+      // Renderowanie kart poszczególnych odjazdów
+      trips.forEach((item, index) => {
+        const diffMinutes = item.depMinutes - searchMinutes;
+        
+        // INTELIGENTNE POKAZYWANIE CZASU Z DANYCH DLA ODŚWIEŻANIA NA ŻYWO:
+        let timeBadgeHtml = '';
+        if (diffMinutes >= 0 && diffMinutes <= 60) {
+          const text = diffMinutes === 0 ? 'Odjazd teraz!' : `Odjazd za ${diffMinutes} min`;
+          timeBadgeHtml = `<div class="time-badge urgent" data-dep-mins="${item.depMinutes}" data-dep-time="${item.fromStop.time}">${text}</div>`;
+        } else {
+          timeBadgeHtml = `<div class="time-badge normal" data-dep-mins="${item.depMinutes}" data-dep-time="${item.fromStop.time}">Odjazd ${item.fromStop.time}</div>`;
+        }
+
+        const badgeColor = item.operatorData.badgeColor || '#1e88e5';
+        const operatorName = item.operatorData.name || item.operatorKey;
+
+        html += `
+          <div class="trip-card">
+            <div class="card-top-bar">
+              <div class="operator-badge" style="background-color: ${badgeColor};" title="${operatorName}">
+                ${item.operatorKey}
+              </div>
+              ${timeBadgeHtml}
+            </div>
+
+            <div class="route-display">
+              <div class="stop-point start">
+                <div class="time-large">${item.fromStop.time}</div>
+                <div class="stop-name" title="${fromStopName}">${fromStopName}</div>
+              </div>
+
+              <div class="route-timeline-indicator">
+                <div class="duration-pill">${item.durationMinutes} min</div>
+                <div class="timeline-line"></div>
+                ${farePrice ? `
+                  <div class="fare-pill" title="Cena biletu jednorazowego">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"/>
+                      <path d="M14.8 9A2 2 0 0 0 13 8h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1-1.8-1"/>
+                      <path d="M12 6v2m0 8v2"/>
+                    </svg>
+                    ${farePrice}
+                  </div>
+                ` : ''}
+              </div>
+
+              <div class="stop-point end">
+                <div class="time-large">${item.toStop.time}</div>
+                <div class="stop-name" title="${toStopName}">${toStopName}</div>
+              </div>
+            </div>
+
+            <button type="button" class="details-toggle" onclick="toggleStopsTimeline(${index})">
+              <span>Rozkład przystanków na trasie (${item.allIntermediateStops.length})</span>
+              <span id="arrow-${index}">▼</span>
+            </button>
+
+            <div class="stops-timeline" id="stops-timeline-${index}">
+              ${item.allIntermediateStops.map((stopItem, sIdx) => {
+                const stopObj = scheduleData.stops.find(s => s.id === stopItem.stopId);
+                const stopName = stopObj ? stopObj.name : stopItem.stopId;
+                const isStartOrEnd = (sIdx === 0 || sIdx === item.allIntermediateStops.length - 1);
+                
+                return `
+                  <div class="timeline-item ${isStartOrEnd ? 'active' : ''}">
+                    <div class="timeline-item-time">${stopItem.time}</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-name">${stopName}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      });
+
+      resultsContainer.innerHTML = html;
+    }
+
+    // Funkcja zwijania/rozwijania listy przystanków w karcie
+    function toggleStopsTimeline(index) {
+      const timeline = document.getElementById(`stops-timeline-${index}`);
+      const arrow = document.getElementById(`arrow-${index}`);
+      if (timeline) {
+        timeline.classList.toggle('open');
+        if (arrow) {
+          arrow.textContent = timeline.classList.contains('open') ? '▲' : '▼';
+        }
+      }
+    }
+
+    // ==========================================================================
+    // 5. AUTOMATYCZNE ODŚWIEŻANIE ODLICZANIA MINUT NA ŻYWO (CO 10 SEKUND)
+    // ==========================================================================
+    function updateLiveCountdowns() {
+      const timeBadges = document.querySelectorAll('.time-badge[data-dep-mins]');
+      if (!timeBadges || timeBadges.length === 0) return;
+
+      // Sprawdzamy czy wybrana w kalendarzu data to dzisiejszy dzień
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const todayStr = `${year}-${month}-${day}`;
+
+      // Jeśli użytkownik przegląda inny dzień niż dzisiejszy, nie przeliczamy na żywo
+      if (dateInput.value !== todayStr) return;
+
+      const currentMins = now.getHours() * 60 + now.getMinutes();
+
+      timeBadges.forEach(badge => {
+        const depMins = parseInt(badge.getAttribute('data-dep-mins'), 10);
+        const depTimeStr = badge.getAttribute('data-dep-time');
+        const diffMinutes = depMins - currentMins;
+
+        if (diffMinutes >= 0 && diffMinutes <= 60) {
+          const text = diffMinutes === 0 ? 'Odjazd teraz!' : `Odjazd za ${diffMinutes} min`;
+          badge.className = 'time-badge urgent';
+          badge.innerHTML = text;
+        } else {
+          badge.className = 'time-badge normal';
+          badge.innerHTML = `Odjazd ${depTimeStr}`;
+        }
+      });
+    }
+
+    // Uruchomienie automatycznego przeliczania co 10 sekund
+    setInterval(updateLiveCountdowns, 10000);
+
+    // ==========================================================================
+    // 6. URUCHOMIENIE APLIKACJI
+    // ==========================================================================
+    window.addEventListener('DOMContentLoaded', loadScheduleData);
+  </script>
+</body>
+</html>

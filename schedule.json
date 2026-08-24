@@ -1,0 +1,3909 @@
+{
+  "stops": [
+    {
+      "id": "ns-dworzec-mpk",
+      "name": "Nowy Sącz Dworzec MPK",
+      "zone": "nowy-sacz"
+    },
+    {
+      "id": "ns-bulwar-narwiku",
+      "name": "Nowy Sącz Bulwar Narwiku - Most",
+      "zone": "nowy-sacz"
+    },
+    {
+      "id": "ns-krakowska",
+      "name": "Nowy Sącz ul. Krakowska - Skrzyżowanie",
+      "zone": "nowy-sacz"
+    },
+    {
+      "id": "chelmiec-marcin",
+      "name": "Chełmiec ul. Marcinkowicka",
+      "zone": "chelmiec"
+    },
+    {
+      "id": "rdziostow-szkola",
+      "name": "Rdziostów Szkoła",
+      "zone": "rdziostow"
+    },
+    {
+      "id": "marcinkowice",
+      "name": "Marcinkowice",
+      "zone": "marcinkowice"
+    },
+    {
+      "id": "kleczany-kam",
+      "name": "Klęczany Kamieniołom",
+      "zone": "kleczany"
+    },
+    {
+      "id": "chomranice-kosciol",
+      "name": "Chomranice Kościół",
+      "zone": "chomranice"
+    },
+    {
+      "id": "klodne-szkola",
+      "name": "Kłodne Szkoła",
+      "zone": "chomranice"
+    },
+    {
+      "id": "mecina-centrum",
+      "name": "Męcina Centrum",
+      "zone": "mecina"
+    },
+    {
+      "id": "mecina-zadziele",
+      "name": "Męcina Zadziele",
+      "zone": "mecina"
+    },
+    {
+      "id": "mecina-miczaki",
+      "name": "Męcina Miczaki",
+      "zone": "mecina"
+    }
+  ],
+  "operators": {
+    "MRB": {
+      "name": "Mirobus",
+      "badgeColor": "#1e88e5"
+    },
+    "WOJ": {
+      "name": "Transport Busem T. Wójcik",
+      "badgeColor": "#f59e0b"
+    }
+  },
+  "trips": [
+    {
+      "id": "WOJ-MEC-NS-01",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "05:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "05:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "05:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "05:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "05:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "05:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "05:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "05:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "05:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "05:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-02",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "05:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "05:32"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "05:37"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "05:42"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "05:45"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "05:47"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "05:51"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "05:52"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "05:57"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:07"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-03",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-miczaki",
+          "time": "05:54"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "06:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "06:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "06:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-04",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "sunday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "06:15"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:17"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:27"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:30"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:32"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "06:36"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:37"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "06:42"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:52"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-05",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-miczaki",
+          "time": "06:20"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "06:26"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:28"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "06:37"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:41"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:46"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:49"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:51"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "06:55"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:56"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:01"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:11"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-06",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "07:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "07:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-07",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "07:20"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:22"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:27"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:32"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:35"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:37"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "07:41"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:42"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:47"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:57"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-08",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-miczaki",
+          "time": "07:55"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:01"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:03"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:08"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:13"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:16"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:18"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "08:22"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:23"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:28"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:38"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-09",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "sunday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "08:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-10",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:45"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:47"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:52"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:57"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "09:00"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "09:02"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "09:06"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "09:07"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "09:12"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "09:22"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-11",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "09:15"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:17"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "09:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "09:27"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "09:30"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "09:32"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "09:36"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "09:37"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "09:42"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "09:52"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-12",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "10:10"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:12"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "10:17"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "10:22"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "10:25"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "10:27"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "10:31"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "10:32"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "10:37"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "10:47"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-13",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "11:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "11:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "11:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "11:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "11:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "11:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "11:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "11:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "11:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-14",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "11:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:52"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "11:57"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "12:02"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "12:05"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "12:07"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "12:11"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "12:12"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "12:17"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "12:27"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-15",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "12:20"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:22"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "12:27"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "12:32"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "12:35"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "12:37"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "12:41"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "12:42"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "12:47"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "12:57"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-16",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "13:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "13:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "13:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "13:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "13:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "13:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "13:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-17",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "13:15"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:17"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "13:27"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "13:30"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "13:32"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "13:36"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "13:37"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "13:42"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:52"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-18",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "13:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:52"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:57"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:02"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:05"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:07"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "14:11"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:12"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:17"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:27"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-19",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "14:10"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:12"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:17"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:22"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:25"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:27"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "14:31"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:32"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:37"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:47"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-20",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "14:40"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:42"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:47"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:52"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:55"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:57"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "15:01"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:02"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "15:07"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "15:17"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-21",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "15:45"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:47"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "15:52"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "15:57"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "16:00"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "16:02"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "16:06"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "16:07"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "16:12"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "16:22"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-22",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "16:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "16:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "16:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "16:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "16:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "16:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "16:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "16:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "16:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-23",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "17:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "17:07"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "17:12"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "17:17"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "17:20"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "17:22"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "17:26"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "17:27"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "17:32"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "17:42"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-24",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "18:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "18:02"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "18:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "18:12"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "18:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "18:17"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "18:21"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "18:22"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "18:27"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "18:37"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-NS-25",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-zadziele",
+          "time": "19:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "19:32"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "19:37"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "19:42"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "19:45"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "19:47"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "19:51"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "19:52"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "19:57"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "20:07"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-01",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:10"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "06:20"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:25"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "06:26"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:30"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:32"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:35"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:40"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:45"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "06:48"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-02",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:35"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "06:45"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:50"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "06:51"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:55"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:57"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:00"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:10"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "07:13"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-03",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday",
+        "saturday",
+        "sunday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:00"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:10"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:15"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "07:16"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:35"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "07:38"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-04",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:35"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:45"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:50"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "07:51"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:55"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:57"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:00"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:10"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:13"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-05",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:05"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:10"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "08:11"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:17"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:30"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:33"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-06",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:20"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:35"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "08:36"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:40"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:42"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:45"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:55"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "08:58"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "09:34"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-07",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:50"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "09:00"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "09:05"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "09:06"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "09:10"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "09:12"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "09:15"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "09:20"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:25"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "09:28"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-08",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday",
+        "saturday",
+        "sunday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "09:45"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "09:55"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "10:00"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "10:01"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "10:05"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "10:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "10:10"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "10:15"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:20"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "10:23"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-09",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "10:25"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "10:35"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "10:40"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "10:41"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "10:45"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "10:47"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "10:50"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "10:55"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:00"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "11:03"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "11:09"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-10",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "11:20"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "11:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "11:35"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "11:36"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "11:40"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "11:42"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "11:45"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "11:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:55"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "11:58"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-11",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "12:00"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "12:10"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "12:15"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "12:16"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "12:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "12:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "12:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "12:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:35"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "12:38"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-12",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:00"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "13:10"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "13:15"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "13:16"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "13:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "13:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "13:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:35"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "13:38"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-13",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:05"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:10"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "14:11"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:17"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:30"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "14:33"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-14",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:20"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:35"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "14:36"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:40"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:42"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:45"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:50"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "14:58"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:03"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "15:08"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "15:14"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-15",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:45"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:55"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:00"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "15:01"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "15:05"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "15:07"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "15:10"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "15:15"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:20"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "15:23"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-16",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "15:15"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "15:25"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:30"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "15:31"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "15:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "15:37"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "15:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "15:45"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:50"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "15:53"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-17",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "15:35"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "15:45"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:50"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "15:51"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "15:55"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "15:57"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "16:00"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "16:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:10"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "16:15"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-18",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "16:30"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "16:40"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "16:45"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "16:46"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "16:50"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "16:52"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "16:55"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "17:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "17:05"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "17:08"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-19",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "17:15"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "17:25"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "17:30"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "17:31"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "17:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "17:37"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "17:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "17:45"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "17:50"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "17:53"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "17:59"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-20",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "18:15"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "18:25"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "18:30"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "18:31"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "18:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "18:37"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "18:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "18:45"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "18:50"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "18:53"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-21",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "19:00"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "19:10"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "19:15"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "19:16"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "19:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "19:22"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "19:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "19:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "19:35"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "19:38"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "19:44"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-NS-MEC-22",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "20:10"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "20:20"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "20:25"
+        },
+        {
+          "stopId": "chelmiec-marcin",
+          "time": "20:26"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "20:30"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "20:32"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "20:35"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "20:40"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "20:45"
+        },
+        {
+          "stopId": "mecina-zadziele",
+          "time": "20:48"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-01",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "05:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "06:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-02",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-03",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:25"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "07:34"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:39"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:45"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:48"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:50"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:55"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "08:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:10"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-04",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:00"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:09"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:15"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:23"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:30"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:35"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-05",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:25"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "08:34"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:40"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:45"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:48"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:50"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:55"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-06",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "09:10"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "09:19"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "09:25"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "09:30"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "09:33"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "09:35"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "09:40"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:45"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-07",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "10:05"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "10:14"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "10:20"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "10:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "10:28"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "10:30"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "10:35"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:40"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-08",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "11:30"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "11:39"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "11:45"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "11:50"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "11:53"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "11:55"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "12:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:05"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-09",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "12:25"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "12:34"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "12:40"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "12:45"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "12:48"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "12:50"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "12:55"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-10",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:20"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "13:29"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "13:35"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "13:40"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "13:43"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "13:45"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:55"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-11",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:05"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "14:14"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:20"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:28"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:30"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:35"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:40"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-12",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "15:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "15:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "15:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "15:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "15:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-13",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "15:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "16:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "16:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "16:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "16:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "16:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "16:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-14",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "16:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "17:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "17:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "17:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "17:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "17:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "17:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "17:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-15",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "17:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "18:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "18:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "18:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "18:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "18:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "18:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "18:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-NS-MEC-16",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Męcina Centrum / Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "18:55"
+        },
+        {
+          "stopId": "ns-bulwar-narwiku",
+          "time": "19:04"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "19:10"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "19:15"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "19:18"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "19:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "19:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "19:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-01",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "05:15"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "05:20"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "05:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "05:27"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "05:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "05:35"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "05:50"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-02",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "05:55"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:00"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:05"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:07"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:10"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "06:15"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "06:30"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-03",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "06:45"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "06:50"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "06:52"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "06:55"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:00"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "07:15"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-04",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:30"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:37"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:40"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "07:45"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-05",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "07:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "07:45"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "07:50"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "07:52"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "07:55"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:00"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "08:15"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-06",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "08:30"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "08:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "08:37"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "08:40"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "08:45"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "09:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-07",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:25"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "09:30"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "09:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "09:37"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "09:40"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "09:45"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-08",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:35"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "10:40"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "10:50"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "10:55"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "10:57"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "11:00"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "11:05"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "11:20"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-09",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:35"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "11:40"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "11:45"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "11:47"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "11:50"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "11:55"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "12:10"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-10",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:15"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "12:20"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "12:30"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "12:35"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "12:37"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "12:40"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "12:45"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-11",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:10"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "13:15"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "13:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "13:22"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "13:25"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "13:30"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "13:45"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-12",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:10"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "14:15"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "14:20"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "14:22"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "14:25"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "14:30"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "14:45"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-13",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:50"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "14:55"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "15:05"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "15:10"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "15:12"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "15:15"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "15:20"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "15:35"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-14",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday",
+        "saturday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:15"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "16:20"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "16:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "16:27"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "16:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "16:35"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "16:50"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-15",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "17:15"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "17:20"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "17:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "17:27"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "17:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "17:35"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "17:50"
+        }
+      ]
+    },
+    {
+      "id": "MRB-MEC-NS-16",
+      "operator": "MRB",
+      "line": "MRB",
+      "direction": "Nowy Sącz Dworzec MPK",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "mecina-centrum",
+          "time": "18:15"
+        },
+        {
+          "stopId": "chomranice-kosciol",
+          "time": "18:20"
+        },
+        {
+          "stopId": "kleczany-kam",
+          "time": "18:25"
+        },
+        {
+          "stopId": "marcinkowice",
+          "time": "18:27"
+        },
+        {
+          "stopId": "rdziostow-szkola",
+          "time": "18:30"
+        },
+        {
+          "stopId": "ns-krakowska",
+          "time": "18:35"
+        },
+        {
+          "stopId": "ns-dworzec-mpk",
+          "time": "18:50"
+        }
+      ]
+    }
+  ],
+  "fares": {
+    "mecina_nowy-sacz": 6.0,
+    "nowy-sacz_mecina": 6.0,
+    "mecina_chelmiec": 5.5,
+    "chelmiec_mecina": 5.5,
+    "mecina_rdziostow": 5.0,
+    "rdziostow_mecina": 5.0,
+    "mecina_marcinkowice": 4.5,
+    "marcinkowice_mecina": 4.5,
+    "mecina_kleczany": 4.0,
+    "kleczany_mecina": 4.0,
+    "mecina_chomranice": 3.5,
+    "chomranice_mecina": 3.5,
+    "mecina_mecina": 3.5,
+    "chomranice_nowy-sacz": 5.0,
+    "nowy-sacz_chomranice": 5.0,
+    "chomranice_chelmiec": 3.5,
+    "chelmiec_chomranice": 3.5,
+    "chomranice_rdziostow": 3.0,
+    "rdziostow_chomranice": 3.0,
+    "chomranice_marcinkowice": 2.5,
+    "marcinkowice_chomranice": 2.5,
+    "chomranice_kleczany": 2.5,
+    "kleczany_chomranice": 2.5,
+    "chomranice_chomranice": 2.5,
+    "kleczany_nowy-sacz": 4.5,
+    "nowy-sacz_kleczany": 4.5,
+    "kleczany_chelmiec": 3.0,
+    "chelmiec_kleczany": 3.0,
+    "kleczany_rdziostow": 2.5,
+    "rdziostow_kleczany": 2.5,
+    "kleczany_marcinkowice": 2.5,
+    "marcinkowice_kleczany": 2.5,
+    "kleczany_kleczany": 2.5,
+    "marcinkowice_nowy-sacz": 4.0,
+    "nowy-sacz_marcinkowice": 4.0,
+    "marcinkowice_chelmiec": 2.5,
+    "chelmiec_marcinkowice": 2.5,
+    "marcinkowice_rdziostow": 2.5,
+    "rdziostow_marcinkowice": 2.5,
+    "marcinkowice_marcinkowice": 2.5,
+    "rdziostow_nowy-sacz": 3.5,
+    "nowy-sacz_rdziostow": 3.5,
+    "rdziostow_chelmiec": 2.5,
+    "chelmiec_rdziostow": 2.5,
+    "rdziostow_rdziostow": 2.5,
+    "chelmiec_nowy-sacz": 3.5,
+    "nowy-sacz_chelmiec": 3.5,
+    "chelmiec_chelmiec": 2.5,
+    "nowy-sacz_nowy-sacz": 3.5
+  }
+}
