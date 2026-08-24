@@ -236,11 +236,12 @@
     }
 
     .input-label {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
 
     .select-input-container {
@@ -268,24 +269,111 @@
       box-shadow: 0 0 6px rgba(244, 63, 94, 0.7);
     }
 
-    select, input[type="date"], input[type="time"] {
+    input[type="text"], input[type="date"], input[type="time"] {
       width: 100%;
       background-color: var(--bg-input);
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      padding: 12px 14px 12px 42px;
+      padding: 12px 36px 12px 42px;
       border-radius: var(--radius-md);
       font-size: 14px;
       font-weight: 500;
       outline: none;
       transition: var(--transition-fast);
-      appearance: none;
-      cursor: pointer;
     }
 
-    select:focus, input:focus {
+    input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus {
       border-color: var(--accent-green);
       box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 3;
+      padding: 0 4px;
+      line-height: 1;
+    }
+
+    .clear-btn.visible {
+      display: block;
+    }
+
+    .clear-btn:hover {
+      color: var(--text-main);
+    }
+
+    /* Rozwijany boks autouzupełniania */
+    .autocomplete-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      z-index: 100;
+      max-height: 230px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .autocomplete-dropdown.open {
+      display: block;
+    }
+
+    .autocomplete-item {
+      padding: 12px 16px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      transition: var(--transition-fast);
+    }
+
+    .autocomplete-item:last-child {
+      border-bottom: none;
+    }
+
+    .autocomplete-item:hover, .autocomplete-item.active-item {
+      background-color: var(--bg-card-hover);
+      color: var(--accent-green);
+    }
+
+    .autocomplete-item .highlight {
+      color: var(--accent-green);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .autocomplete-empty {
+      padding: 14px;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Custom scrollbar dla autouzupełniania */
+    .autocomplete-dropdown::-webkit-scrollbar {
+      width: 5px;
+    }
+    .autocomplete-dropdown::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .autocomplete-dropdown::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
     }
 
     /* Przycisk zamiany miejscami "Skąd" <-> "Dokąd" */
@@ -320,10 +408,31 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
+      align-items: end;
     }
 
     .datetime-grid input {
-      padding-left: 14px; /* Brak ikony z lewej dla date/time */
+      padding-left: 14px;
+      padding-right: 12px;
+      cursor: pointer;
+    }
+
+    /* Stylizacja ikonek kalendarza i zegara na jasny biały kolor po prawej stronie */
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(1.2);
+      cursor: pointer;
+      opacity: 0.85;
+      padding: 4px;
+      margin-left: auto;
+      border-radius: 4px;
+      transition: var(--transition-fast);
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator:hover,
+    input[type="time"]::-webkit-calendar-picker-indicator:hover {
+      opacity: 1;
+      transform: scale(1.15);
     }
 
     /* Automatyczna informacja o wykrytym dniu tygodnia */
@@ -689,12 +798,13 @@
         <div class="stops-wrapper">
           <!-- SKĄD -->
           <div class="input-group">
-            <label class="input-label" for="fromStopSelect">Skąd jedziemy?</label>
+            <label class="input-label" for="fromStopInput">Skąd jedziemy?</label>
             <div class="select-input-container">
               <span class="stop-dot start-dot"></span>
-              <select id="fromStopSelect">
-                <option value="">Ładowanie przystanków...</option>
-              </select>
+              <input type="text" id="fromStopInput" placeholder="Wpisz przystanek odjazdowy..." autocomplete="off">
+              <input type="hidden" id="fromStopId" value="">
+              <button type="button" class="clear-btn" id="clearFromBtn" title="Wyczyść">&times;</button>
+              <div class="autocomplete-dropdown" id="fromStopDropdown"></div>
             </div>
           </div>
 
@@ -705,12 +815,13 @@
 
           <!-- DOKĄD -->
           <div class="input-group">
-            <label class="input-label" for="toStopSelect">Dokąd jedziemy?</label>
+            <label class="input-label" for="toStopInput">Dokąd jedziemy?</label>
             <div class="select-input-container">
               <span class="stop-dot end-dot"></span>
-              <select id="toStopSelect">
-                <option value="">Ładowanie przystanków...</option>
-              </select>
+              <input type="text" id="toStopInput" placeholder="Wpisz przystanek docelowy..." autocomplete="off">
+              <input type="hidden" id="toStopId" value="">
+              <button type="button" class="clear-btn" id="clearToBtn" title="Wyczyść">&times;</button>
+              <div class="autocomplete-dropdown" id="toStopDropdown"></div>
             </div>
           </div>
         </div>
@@ -762,8 +873,16 @@
     let scheduleData = null; // Przechowuje pobrane dane z pliku schedule.json
 
     // Elementy HTML z drzewa DOM
-    const fromStopSelect = document.getElementById('fromStopSelect');
-    const toStopSelect   = document.getElementById('toStopSelect');
+    const fromStopInput  = document.getElementById('fromStopInput');
+    const fromStopId     = document.getElementById('fromStopId');
+    const clearFromBtn   = document.getElementById('clearFromBtn');
+    const fromStopDropdown = document.getElementById('fromStopDropdown');
+
+    const toStopInput    = document.getElementById('toStopInput');
+    const toStopId       = document.getElementById('toStopId');
+    const clearToBtn     = document.getElementById('clearToBtn');
+    const toStopDropdown = document.getElementById('toStopDropdown');
+
     const swapStopsBtn   = document.getElementById('swapStopsBtn');
     const dateInput      = document.getElementById('dateInput');
     const timeInput      = document.getElementById('timeInput');
@@ -790,10 +909,11 @@
         console.log('✅ Dane rozkładu jazdy zostały pomyślnie załadowane:', scheduleData);
         
         // Inicjalizacja komponentów po pomyślnym pobraniu danych
-        populateStopsDropdowns();
+        setupAutocomplete(fromStopInput, fromStopId, clearFromBtn, fromStopDropdown);
+        setupAutocomplete(toStopInput, toStopId, clearToBtn, toStopDropdown);
         setDefaultDateTime();
         
-        // Formularz rozpoczyna w stanie pustym (wyśrodkowany), bez automatycznego szukania na wystartowanie
+        // Formularz rozpoczyna w stanie pustym (wyśrodkowany)
       } catch (error) {
         console.error('❌ Błąd podczas ładowania danych:', error);
         resultsContainer.innerHTML = `
@@ -806,29 +926,136 @@
       }
     }
 
-    // Wypełnienie rozwijanych list przystanków "Skąd" i "Dokąd"
-    function populateStopsDropdowns() {
-      if (!scheduleData || !scheduleData.stops) return;
+    // Inicjalizacja inteligentnego pola z podpowiedziami (Autocomplete)
+    function setupAutocomplete(inputElem, hiddenElem, clearBtn, dropdownElem) {
+      let activeIndex = -1;
 
-      fromStopSelect.innerHTML = '<option value="" disabled selected>Wybierz przystanek odjazdowy...</option>';
-      toStopSelect.innerHTML   = '<option value="" disabled selected>Wybierz przystanek docelowy...</option>';
+      // Renderowanie podpowiedzi
+      function renderSuggestions(query) {
+        if (!scheduleData || !scheduleData.stops) return;
 
-      scheduleData.stops.forEach((stop) => {
-        const optionFrom = document.createElement('option');
-        optionFrom.value = stop.id;
-        optionFrom.textContent = stop.name;
+        const cleanQuery = query.trim().toLowerCase();
+        let matches = [];
 
-        const optionTo = document.createElement('option');
-        optionTo.value = stop.id;
-        optionTo.textContent = stop.name;
+        if (cleanQuery === '') {
+          matches = scheduleData.stops;
+        } else {
+          matches = scheduleData.stops.filter(stop => 
+            stop.name.toLowerCase().includes(cleanQuery)
+          );
+        }
 
-        fromStopSelect.appendChild(optionFrom);
-        toStopSelect.appendChild(optionTo);
+        if (matches.length === 0) {
+          dropdownElem.innerHTML = `<div class="autocomplete-empty">Brak przystanku "${query}"</div>`;
+          dropdownElem.classList.add('open');
+          return;
+        }
+
+        let html = '';
+        matches.forEach((stop, index) => {
+          let stopNameHtml = stop.name;
+          if (cleanQuery !== '') {
+            const regex = new RegExp(`(${cleanQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            stopNameHtml = stop.name.replace(regex, '<span class="highlight">$1</span>');
+          }
+
+          html += `
+            <div class="autocomplete-item ${index === activeIndex ? 'active-item' : ''}" data-id="${stop.id}" data-name="${stop.name}">
+              <span>${stopNameHtml}</span>
+            </div>
+          `;
+        });
+
+        dropdownElem.innerHTML = html;
+        dropdownElem.classList.add('open');
+
+        dropdownElem.querySelectorAll('.autocomplete-item').forEach(item => {
+          item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectStop(item.getAttribute('data-id'), item.getAttribute('data-name'));
+          });
+        });
+      }
+
+      function selectStop(stopId, stopName) {
+        inputElem.value = stopName;
+        hiddenElem.value = stopId;
+        clearBtn.classList.add('visible');
+        dropdownElem.classList.remove('open');
+        activeIndex = -1;
+
+        if (fromStopId.value && toStopId.value) {
+          searchTrips();
+        }
+      }
+
+      inputElem.addEventListener('input', () => {
+        hiddenElem.value = '';
+        if (inputElem.value.trim() !== '') {
+          clearBtn.classList.add('visible');
+        } else {
+          clearBtn.classList.remove('visible');
+        }
+        activeIndex = -1;
+        renderSuggestions(inputElem.value);
       });
 
-      fromStopSelect.value = '';
-      toStopSelect.value = '';
+      inputElem.addEventListener('focus', () => {
+        document.querySelectorAll('.autocomplete-dropdown').forEach(d => d.classList.remove('open'));
+        renderSuggestions(inputElem.value);
+      });
+
+      clearBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        inputElem.value = '';
+        hiddenElem.value = '';
+        clearBtn.classList.remove('visible');
+        renderSuggestions('');
+        inputElem.focus();
+      });
+
+      inputElem.addEventListener('keydown', (e) => {
+        const items = dropdownElem.querySelectorAll('.autocomplete-item');
+        if (!dropdownElem.classList.contains('open') || items.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          activeIndex = (activeIndex + 1) % items.length;
+          updateActiveItem(items);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          activeIndex = (activeIndex - 1 + items.length) % items.length;
+          updateActiveItem(items);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (activeIndex >= 0 && items[activeIndex]) {
+            items[activeIndex].click();
+          } else if (items.length > 0) {
+            items[0].click();
+          }
+        } else if (e.key === 'Escape') {
+          dropdownElem.classList.remove('open');
+        }
+      });
+
+      function updateActiveItem(items) {
+        items.forEach((item, idx) => {
+          if (idx === activeIndex) {
+            item.classList.add('active-item');
+            item.scrollIntoView({ block: 'nearest' });
+          } else {
+            item.classList.remove('active-item');
+          }
+        });
+      }
     }
+
+    // Zamknięcie po kliknięciu poza polem
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.select-input-container')) {
+        document.querySelectorAll('.autocomplete-dropdown').forEach(d => d.classList.remove('open'));
+      }
+    });
 
     // ==========================================================================
     // 2. AUTOMATYCZNA LOGIKA OBSŁUGI DATY, CZASU I DNIA TYGODNIA
@@ -851,6 +1078,15 @@
 
       // Domyślna godzina i data
     }
+
+    // Kliknięcie w dowolne miejsce pola daty/godziny otwiera kalendarz/zegar
+    [dateInput, timeInput].forEach(input => {
+      input.addEventListener('click', () => {
+        if (typeof input.showPicker === 'function') {
+          try { input.showPicker(); } catch (e) {}
+        }
+      });
+    });
 
     // Wylicza typ dnia (weekday / saturday / sunday) oraz nazwę dnia z wybranej daty
     function getDayTypeFromDate(dateStr) {
@@ -881,36 +1117,33 @@
 
     // Reakcja na zmianę daty w formularzu
     dateInput.addEventListener('change', () => {
-      if (fromStopSelect.value && toStopSelect.value) {
+      if (fromStopId.value && toStopId.value) {
         searchTrips();
       }
     });
 
     // Reakcja na zmianę godziny w formularzu
     timeInput.addEventListener('change', () => {
-      if (fromStopSelect.value && toStopSelect.value) {
+      if (fromStopId.value && toStopId.value) {
         searchTrips();
       }
     });
 
     // Zamiana przystanków "Skąd" <-> "Dokąd"
     swapStopsBtn.addEventListener('click', () => {
-      const tempVal = fromStopSelect.value;
-      fromStopSelect.value = toStopSelect.value;
-      toStopSelect.value = tempVal;
-      if (fromStopSelect.value && toStopSelect.value) {
-        searchTrips();
-      }
-    });
+      const tempName = fromStopInput.value;
+      const tempId   = fromStopId.value;
 
-    // Reakcja na zmianę przystanków w selectach
-    fromStopSelect.addEventListener('change', () => {
-      if (fromStopSelect.value && toStopSelect.value) {
-        searchTrips();
-      }
-    });
-    toStopSelect.addEventListener('change', () => {
-      if (fromStopSelect.value && toStopSelect.value) {
+      fromStopInput.value = toStopInput.value;
+      fromStopId.value   = toStopId.value;
+
+      toStopInput.value = tempName;
+      toStopId.value   = tempId;
+
+      clearFromBtn.classList.toggle('visible', !!fromStopInput.value);
+      clearToBtn.classList.toggle('visible', !!toStopInput.value);
+
+      if (fromStopId.value && toStopId.value) {
         searchTrips();
       }
     });
@@ -926,16 +1159,16 @@
       if (!scheduleData || !scheduleData.trips) return;
 
       const mainContentElement = document.querySelector('.main-content');
-      const fromStopId = fromStopSelect.value;
-      const toStopId   = toStopSelect.value;
+      const startId = fromStopId.value;
+      const endId   = toStopId.value;
 
       // Sprawdzenie czy przystanki zostały wybrane
-      if (!fromStopId || !toStopId) {
+      if (!startId || !endId) {
         if (mainContentElement) mainContentElement.classList.add('has-results');
         resultsContainer.innerHTML = `
           <div class="empty-state">
             <div class="empty-title">Wybierz przystanki</div>
-            <div class="empty-desc">Wybierz przystanek odjazdowy oraz docelowy z formularza, aby wyszukać dostępne połączenia.</div>
+            <div class="empty-desc">Wybierz przystanek odjazdowy oraz docelowy z podpowiedzi, aby wyszukać dostępne połączenia.</div>
           </div>
         `;
         return;
@@ -952,7 +1185,7 @@
       const selectedDayType = dayInfo.dayType; // "weekday", "saturday", "sunday"
 
       // Walidacja: Przystanek początkowy i końcowy nie mogą być takie same
-      if (fromStopId === toStopId) {
+      if (startId === endId) {
         resultsContainer.innerHTML = `
           <div class="empty-state">
             <div class="empty-title">Wybierz różne przystanki</div>
@@ -974,8 +1207,8 @@
         if (!matchesDay) return;
 
         // 2. Szukamy pozycji przystanku początkowego i końcowego w tym kursie
-        const startIndex = trip.stops.findIndex(s => s.stopId === fromStopId);
-        const endIndex   = trip.stops.findIndex(s => s.stopId === toStopId);
+        const startIndex = trip.stops.findIndex(s => s.stopId === startId);
+        const endIndex   = trip.stops.findIndex(s => s.stopId === endId);
 
         // Przystanek startowy musi w kursie występować PRZED przystankiem docelowym (startIndex < endIndex)
         if (startIndex !== -1 && endIndex !== -1 && startIndex < endIndex) {
@@ -1049,8 +1282,11 @@
     // ==========================================================================
 
     function renderResults(trips, searchMinutes, dayInfo) {
-      const fromStopName = fromStopSelect.options[fromStopSelect.selectedIndex]?.text || '';
-      const toStopName   = toStopSelect.options[toStopSelect.selectedIndex]?.text || '';
+      const fromStopObj = scheduleData.stops.find(s => s.id === fromStopId.value);
+      const toStopObj   = scheduleData.stops.find(s => s.id === toStopId.value);
+
+      const fromStopName = fromStopObj ? fromStopObj.name : '';
+      const toStopName   = toStopObj ? toStopObj.name : '';
 
       if (trips.length === 0) {
         resultsContainer.innerHTML = `
@@ -1069,7 +1305,7 @@
         </div>
       `;
 
-      const farePrice = getFarePrice(fromStopSelect.value, toStopSelect.value);
+      const farePrice = getFarePrice(fromStopId.value, toStopId.value);
 
       // Renderowanie kart poszczególnych odjazdów
       trips.forEach((item, index) => {
