@@ -59,6 +59,31 @@
       "id": "mecina-miczaki",
       "name": "Męcina Miczaki",
       "zone": "mecina"
+    },
+    {
+      "id": "pisarzowa-kosciol",
+      "name": "Pisarzowa Kościół",
+      "zone": "pisarzowa"
+    },
+    {
+      "id": "mordarka-szkola",
+      "name": "Mordarka Szkoła",
+      "zone": "mordarka"
+    },
+    {
+      "id": "lim-kopernika-targowa",
+      "name": "Limanowa ul. Targowa / Kopernika",
+      "zone": "limanowa"
+    },
+    {
+      "id": "lim-sowliny",
+      "name": "Limanowa Sowliny",
+      "zone": "limanowa"
+    },
+    {
+      "id": "lim-tarnowska",
+      "name": "Limanowa ul. Tarnowska",
+      "zone": "limanowa"
     }
   ],
   "operators": {
@@ -2521,10 +2546,10 @@
       ]
     },
     {
-      "id": "MRB-NS-MEC-01",
+      "id": "MRB-NS-LIM-01",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2560,14 +2585,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "06:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "06:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "06:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "06:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "06:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-02",
+      "id": "MRB-NS-LIM-02",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2603,14 +2644,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "07:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "07:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "07:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "07:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "07:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-03",
+      "id": "MRB-NS-LIM-03",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2650,14 +2707,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "08:10"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "08:15"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "08:20"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "08:25"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "08:35"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-04",
+      "id": "MRB-NS-LIM-04",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "saturday"
       ],
@@ -2693,14 +2766,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "08:35"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "08:40"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "08:45"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "08:50"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "09:00"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-05",
+      "id": "MRB-NS-LIM-05",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2736,14 +2825,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "09:00"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "09:05"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "09:10"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "09:15"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "09:25"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-06",
+      "id": "MRB-NS-LIM-06",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2779,14 +2884,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "09:45"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "09:50"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "09:55"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "10:00"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "10:10"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-07",
+      "id": "MRB-NS-LIM-07",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday",
         "saturday"
@@ -2823,14 +2944,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "10:40"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "10:45"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "10:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "10:55"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "11:05"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-08",
+      "id": "MRB-NS-LIM-08",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2866,14 +3003,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "12:05"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "12:10"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "12:15"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "12:20"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "12:30"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-09",
+      "id": "MRB-NS-LIM-09",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday",
         "saturday"
@@ -2910,14 +3063,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "13:00"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "13:05"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "13:10"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "13:15"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "13:25"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-10",
+      "id": "MRB-NS-LIM-10",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2953,14 +3122,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "13:55"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:00"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:05"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "14:10"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "14:20"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-11",
+      "id": "MRB-NS-LIM-11",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -2996,14 +3181,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "14:40"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:45"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "14:55"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "15:05"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-12",
+      "id": "MRB-NS-LIM-12",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -3039,14 +3240,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "15:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "15:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "15:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "15:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "15:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-13",
+      "id": "MRB-NS-LIM-13",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -3082,14 +3299,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "16:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "16:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "16:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "16:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "16:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-14",
+      "id": "MRB-NS-LIM-14",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday",
         "saturday"
@@ -3126,14 +3359,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "17:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "17:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "17:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "17:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "17:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-15",
+      "id": "MRB-NS-LIM-15",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -3169,14 +3418,30 @@
         {
           "stopId": "mecina-centrum",
           "time": "18:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "18:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "18:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "18:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "18:55"
         }
       ]
     },
     {
-      "id": "MRB-NS-MEC-16",
+      "id": "MRB-NS-LIM-16",
       "operator": "MRB",
       "line": "MRB",
-      "direction": "Męcina Centrum / Limanowa",
+      "direction": "Limanowa Sowliny",
       "days": [
         "weekday"
       ],
@@ -3212,11 +3477,27 @@
         {
           "stopId": "mecina-centrum",
           "time": "19:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "19:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "19:40"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "19:45"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "19:55"
         }
       ]
     },
     {
-      "id": "MRB-MEC-NS-01",
+      "id": "MRB-LIM-NS-01",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3255,7 +3536,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-02",
+      "id": "MRB-LIM-NS-02",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3263,6 +3544,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "05:30"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "05:40"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "05:45"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "05:50"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "05:55"
@@ -3294,7 +3591,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-03",
+      "id": "MRB-LIM-NS-03",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3302,6 +3599,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "06:15"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "06:25"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "06:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "06:35"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "06:40"
@@ -3333,7 +3646,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-04",
+      "id": "MRB-LIM-NS-04",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3341,6 +3654,22 @@
         "saturday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "07:00"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "07:10"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "07:15"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "07:20"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "07:25"
@@ -3372,7 +3701,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-05",
+      "id": "MRB-LIM-NS-05",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3380,6 +3709,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "07:15"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "07:25"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "07:30"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "07:35"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "07:40"
@@ -3411,7 +3756,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-06",
+      "id": "MRB-LIM-NS-06",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3419,6 +3764,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "08:00"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "08:10"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "08:15"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "08:20"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "08:25"
@@ -3450,7 +3811,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-07",
+      "id": "MRB-LIM-NS-07",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3459,6 +3820,22 @@
         "saturday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "09:00"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "09:10"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "09:15"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "09:20"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "09:25"
@@ -3490,7 +3867,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-08",
+      "id": "MRB-LIM-NS-08",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3498,6 +3875,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "10:10"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "10:20"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "10:25"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "10:30"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "10:35"
@@ -3533,7 +3926,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-09",
+      "id": "MRB-LIM-NS-09",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3542,6 +3935,22 @@
         "saturday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "11:10"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "11:20"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "11:25"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "11:30"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "11:35"
@@ -3573,7 +3982,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-10",
+      "id": "MRB-LIM-NS-10",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3581,6 +3990,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "11:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "12:00"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "12:05"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "12:10"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "12:15"
@@ -3616,7 +4041,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-11",
+      "id": "MRB-LIM-NS-11",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3624,6 +4049,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "12:45"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "12:55"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "13:00"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "13:05"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "13:10"
@@ -3655,7 +4096,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-12",
+      "id": "MRB-LIM-NS-12",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3663,6 +4104,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "13:45"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "13:55"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:00"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:05"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "14:10"
@@ -3694,7 +4151,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-13",
+      "id": "MRB-LIM-NS-13",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3702,6 +4159,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "14:25"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "14:35"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:40"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:45"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "14:50"
@@ -3737,7 +4210,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-14",
+      "id": "MRB-LIM-NS-14",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3746,6 +4219,22 @@
         "saturday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "15:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "16:00"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "16:05"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "16:10"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "16:15"
@@ -3777,7 +4266,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-15",
+      "id": "MRB-LIM-NS-15",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3785,6 +4274,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "16:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "17:00"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "17:05"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "17:10"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "17:15"
@@ -3816,7 +4321,7 @@
       ]
     },
     {
-      "id": "MRB-MEC-NS-16",
+      "id": "MRB-LIM-NS-16",
       "operator": "MRB",
       "line": "MRB",
       "direction": "Nowy Sącz Dworzec MPK",
@@ -3824,6 +4329,22 @@
         "weekday"
       ],
       "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "17:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "18:00"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "18:05"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "18:10"
+        },
         {
           "stopId": "mecina-centrum",
           "time": "18:15"
@@ -3851,6 +4372,586 @@
         {
           "stopId": "ns-dworzec-mpk",
           "time": "18:50"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-01",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "06:45"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "06:54"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "06:58"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "07:03"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "07:08"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "07:14"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "07:19"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-02",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "08:20"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "08:29"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:33"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "08:38"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "08:43"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "08:49"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "08:54"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-03",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "09:50"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "09:59"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:03"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "10:08"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "10:13"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "10:19"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "10:24"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-04",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "11:25"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "11:31"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "11:37"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "11:42"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "11:48"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "11:53"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-05",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "12:50"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:56"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "13:02"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "13:07"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "13:13"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "13:18"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-06",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "14:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:06"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:12"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:17"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "14:23"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "14:28"
+        },
+        {
+          "stopId": "lim-tarnowska",
+          "time": "14:31"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-07",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "15:00"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:06"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "15:12"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "15:17"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "15:23"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "15:28"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-MEC-LIM-08",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Limanowa",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "klodne-szkola",
+          "time": "16:05"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:11"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "16:17"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "16:22"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "16:28"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-01",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "07:50"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "07:54"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "08:01"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "08:06"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "08:11"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "08:20"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-02",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "09:20"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "09:24"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "09:31"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "09:36"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "09:41"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "09:50"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-03",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "10:25"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "10:32"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "10:37"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "10:42"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "10:46"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "10:55"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-04",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "12:00"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "12:04"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "12:11"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "12:16"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "12:21"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "12:30"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-05",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "13:30"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "13:34"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "13:41"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "13:46"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "13:51"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-06",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-tarnowska",
+          "time": "14:30"
+        },
+        {
+          "stopId": "lim-sowliny",
+          "time": "14:33"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "14:37"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "14:44"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "14:49"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "14:54"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "15:03"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-07",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-sowliny",
+          "time": "15:30"
+        },
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "15:34"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "15:41"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "15:46"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "15:51"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "15:55"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "16:04"
+        }
+      ]
+    },
+    {
+      "id": "WOJ-LIM-MEC-08",
+      "operator": "WOJ",
+      "line": "WOJ",
+      "direction": "Kłodne Szkoła / Męcina",
+      "days": [
+        "weekday"
+      ],
+      "stops": [
+        {
+          "stopId": "lim-kopernika-targowa",
+          "time": "16:30"
+        },
+        {
+          "stopId": "mordarka-szkola",
+          "time": "16:38"
+        },
+        {
+          "stopId": "pisarzowa-kosciol",
+          "time": "16:43"
+        },
+        {
+          "stopId": "mecina-centrum",
+          "time": "16:48"
+        },
+        {
+          "stopId": "mecina-miczaki",
+          "time": "16:52"
+        },
+        {
+          "stopId": "klodne-szkola",
+          "time": "16:59"
         }
       ]
     }
